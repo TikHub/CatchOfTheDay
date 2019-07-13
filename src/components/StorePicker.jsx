@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types";
 import { getFunName } from "../helpers";
 
 export default class StorePicker extends React.Component {
@@ -8,6 +9,9 @@ export default class StorePicker extends React.Component {
     // console.log(this.myInput.current.value);
     const storeName = this.myInput.current.value;
     this.props.history.push(`/store/${storeName}`);
+  };
+  static propTypes = {
+    history: PropTypes.object
   };
   render() {
     return (

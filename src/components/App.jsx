@@ -4,6 +4,7 @@ import Order from "./Order";
 import Inventory from "./Inventory";
 import Fish from "./Fish";
 import sampleFishes from "../sample-fishes";
+import PropTypes from "prop-types";
 
 import base from "../base";
 
@@ -84,7 +85,9 @@ export default class App extends React.Component {
       order: order
     });
   };
-
+  static propTypes = {
+    match: PropTypes.object
+  };
   render() {
     return (
       <div className="catch-of-the-day">
